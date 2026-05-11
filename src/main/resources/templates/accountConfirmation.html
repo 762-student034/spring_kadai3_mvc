@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>会員登録確認</title>
+</head>
+
+<body>
+
+    <h1>登録内容確認</h1>
+    <div>以下の内容で登録します</div>
+    <form action="/account" method="post">
+
+    <input type="hidden" name="name" th:value="${name}">
+    <input type="hidden" name="email" th:value="${email}">
+    <input type="hidden" name="password" th:value="${password}">
+    <table border="1">
+        <tr>
+            <th>名前<span class="asterisk">*</span>
+            </th>
+            <td>
+                [[${name}]]
+            </td>
+        </tr>
+
+        <tr>
+            <th>メールアドレス<span class="asterisk">*</span>
+            </th>
+            <td>
+                [[${email}]]
+            </td>
+        </tr>
+
+        <tr>
+            <th>パスワード<span class="asterisk">*</span>
+            </th>
+            <td>
+                [[${password}]]
+            </td>
+
+        </tr>
+    </table>
+    <button>登録</button>
+    </form>
+</body>
+
+</html>

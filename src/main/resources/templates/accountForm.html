@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>会員登録</title>
+</head>
+
+<body>
+
+	<h1>会員登録</h1>
+	<ul>
+		<li>名前は必須です</li>
+		<li>メールアドレスは必須です</li>
+		<li>パスワードは必須です</li>
+	</ul>
+
+	<ul class="errorMsg" th:if="${errorList != null}">
+		<li th:each="msg : ${errorList}" th:text="${msg}"></li>
+	</ul>
+
+	<form th:action="@{/account/confirm}" method="post">
+		<table border="1">
+			<tr>
+				<th>名前<span class="asterisk">*</span>
+				</th>
+				<td>
+					<input name="name" placeholder="名前 太郎" th:value="${account.name}">
+				</td>
+			</tr>
+
+			<tr>
+				<th>メールアドレス<span class="asterisk">*</span>
+				</th>
+				<td>
+					<input name="email" placeholder="example@example.com" th:value="${account.email}">
+				</td>
+			</tr>
+
+			<tr>
+				<th>パスワード<span class="asterisk">*</span>
+				</th>
+				<td>
+					<input name="password" th:value="${account.password}">
+				</td>
+
+			</tr>
+		</table>
+		<button>送信</button>
+	</form>
+
+</body>
+
+</html>
