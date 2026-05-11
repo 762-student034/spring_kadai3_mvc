@@ -1,0 +1,101 @@
+/* Base page styling */
+body {
+    font-family: "Segoe UI", "Hiragino Sans", "Meiryo", sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center content */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Form container */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Paragraph spacing inside form */
+form p {
+    margin: 15px 0;
+}
+
+/* Select + number input */
+select,
+input[type="number"] {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    margin-left: 10px;
+    margin-right: 4px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #005ea6;
+}
+
+/* Error message */
+.error-message {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px 14px;
+    background: #ffd2d2;
+    border: 1px solid #d8000c;
+    border-radius: 6px;
+    color: #d8000c;
+    font-weight: 600;
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+/* Results */
+hr {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.result-item {
+    max-width: 600px;
+    margin: 5px auto;
+    padding: 8px 12px;
+    background: #eef3ff;
+    border-left: 4px solid #0078d4;
+    border-radius: 4px;
+    font-family: "Consolas", monospace;
+    font-size: 15px;
+}
+
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
