@@ -16,24 +16,8 @@ public class RanUtil {
 	}
 
 	public int mode(boolean withNumber, boolean withAlphabet) {
-		int mode = 0;
-
-		if (withNumber && !withAlphabet) { //数字
-			mode = 1; 
-		}
-
-		if (!withNumber && withAlphabet) { //英字
-			mode = 2;
-		}
-
-		if (withNumber && withAlphabet) { //両方入れている
-			mode = 3;
-		}
-
-		if (!withNumber && !withAlphabet) { //両方も入れてない
-			mode = 0;
-		}
-
-		return mode;
+	    return withNumber && withAlphabet ? 3 : //数字英字
+	           withNumber ? 1 : //数字
+	           withAlphabet ? 2 : 0; //英字 else エラー
 	}
 }
